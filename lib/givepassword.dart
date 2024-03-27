@@ -29,7 +29,7 @@ class _givePasswordState extends State<givePassword> {
   List<Map<String, dynamic>> jsonList123 = [];
 
   Future<void> loadJson() async {
-    String jsonList = await rootBundle.loadString("assets/dic.json");
+    String jsonList = await DefaultAssetBundle.of(context).loadString("assets/dic.json");
     List<dynamic> jsondecode2 = jsonDecode(jsonList);
     setState(() {
       jsonList123 = jsondecode2.cast<Map<String, dynamic>>();
